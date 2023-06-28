@@ -8,6 +8,9 @@ public class StringList {
 
     public String add(String item) {
         String[] newList = Arrays.copyOf(list, size+1);
+        if(item == null){
+            throw new IllegalArgumentException();
+        }
         if(isEmpty()){
             newList[0] = item;
         } else {
@@ -19,7 +22,7 @@ public class StringList {
     }
 
     public String add(int index, String item) {
-        if(index > size - 1){
+        if(index > size - 1 || item == null){
             throw new IllegalArgumentException();
         }
 
@@ -34,7 +37,7 @@ public class StringList {
     }
 
     public String set(int index, String item){
-        if(index > size - 1){
+        if(index > size - 1 || item == null){
             throw new IllegalArgumentException();
         }
         list[index] = item;
