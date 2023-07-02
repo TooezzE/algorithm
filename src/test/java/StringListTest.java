@@ -143,6 +143,6 @@ public class StringListTest {
     @Test
     public void toArrayWorksCorrect() {
         String[] expected = new String[]{"aaa", "bbb", "ccc", "ddd"};
-        assertEquals(expected, stringList.toArray());
+        assertArrayEquals(expected, stringList.toArray());
     }
 }

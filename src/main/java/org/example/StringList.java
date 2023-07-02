@@ -56,8 +56,7 @@ public class StringList {
         for (int j = index; j < list.length - 1; j++) {
             list[j] = list[j+1];
         }
-        String[] newList = Arrays.copyOf(list, list.length - 1);
-        list = newList;
+        list = Arrays.copyOf(list, list.length - 1);
         size--;
         if(!isFinded){
             throw new IllegalArgumentException();
@@ -72,8 +71,7 @@ public class StringList {
         for (int i = index; i < list.length - 1; i++) {
             list[i] = list[i+1];
         }
-        String[] newList = Arrays.copyOf(list, size - 1);
-        list = newList;
+        list = Arrays.copyOf(list, size - 1);
         size--;
         return temp;
     }

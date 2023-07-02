@@ -1,12 +1,10 @@
 
 import org.example.IntegerList;
-import org.example.StringList;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Optional;
-
 import static org.junit.Assert.*;
+
 public class IntegerListTest {
     private final IntegerList integerList = new IntegerList();
 
@@ -151,7 +149,7 @@ public class IntegerListTest {
     @Test
     public void toArrayWorksCorrect() {
         Integer[] expected = new Integer[]{1, 10, 100, 7, 3, 18, 92};
-        assertEquals(expected, integerList.toArray());
+        assertArrayEquals(expected, integerList.toArray());
     }
 
     @Test
